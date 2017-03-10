@@ -1,0 +1,28 @@
+    <h2> Question (1)</h2>
+
+                <section>
+                    <p><div class="panel-body" >
+                            <form role="form" method="post" action="wizard.php">
+                                        <div class="form-group">
+                                            <label id="txt1">Is there a small red granules?</label>
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="radio" name="redgranules" id="optionsRadios1" value="yes" checked="">
+													YES
+                                                </label>
+                                            </div>
+											<div class="radio">
+                                                <label>
+                                                    <input type="radio" name="redgranules" id="optionsRadios1" value="no" checked="">
+													NO
+                                                </label>
+                                            </div>
+											<div class="radio">
+                                                <label>
+                                                    <input type="radio"  name="redgranules" id="optionsRadios1" value="notsure" checked="">
+													Otherwise
+                                                </label>
+                                            </div></p>
+                </section>
+
+

@@ -1,0 +1,288 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doctor& Patient</title>
+
+    <!-- BOOTSTRAP STYLES-->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <!-- FONTAWESOME STYLES-->
+    <link href="assets/css/font-awesome.css" rel="stylesheet" />
+    <!--CUSTOM BASIC STYLES-->
+    <link href="assets/css/basic.css" rel="stylesheet" />
+    <!--CUSTOM MAIN STYLES-->
+    <link href="assets/css/custom.css" rel="stylesheet" />
+    <!-- GOOGLE FONTS-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+    <!-- Our Style -->
+    <!-- FONTAWESOME STYLES-->
+    <!-- PAGE LEVEL STYLES -->
+    <link href="assets/css/bootstrap-fileupload.min.css" rel="stylesheet" />
+    <!--CUSTOM BASIC STYLES-->
+    <!--CUSTOM MAIN STYLES-->
+    <!-- GOOGLE FONTS-->
+</head>
+<body>
+    <div id="wrapper">
+        <nav class="navbar navbar-default navbar-cls-top " role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index_patient.html">Doctor $ Patient </a>
+            </div>
+
+            <div class="header-right">
+
+                <a href="mess_test.html" class="btn btn-info" title="New Message"><b>30 </b><i class="fa fa-envelope-o fa-2x"></i></a>
+                <a href="Q_patient.html" class="btn btn-primary" title="New answer"><b>40 </b><i class="fa fa-question fa-2x"></i></a>
+                <a href="login.html" class="btn btn-danger" title="Logout"><i class="fa fa-exclamation-circle fa-2x"></i></a>
+
+            </div>
+        </nav>
+        <!-- /. NAV TOP  -->
+         <nav class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
+                    <li>
+                        <div class="user-img-div">
+                            <img src="assets/img/user.png" class="img-thumbnail" />
+
+                            <div class="inner-text">
+                                Jhon Deo Alex
+                            <br />
+                                <small>Last Login : 2 Weeks Ago </small>
+                            </div>
+                        </div>
+
+                    </li>
+
+
+                      <li>
+                        <a class="active-menu" href="index_patient.html"><i class="fa fa-home "></i>Home</a>
+                    </li>
+                     <li>
+                                <a href="strange_case.html"><i class="fa fa-stethoscope"></i>strange cases </a>
+                            </li>
+                    <li>
+                        <a href="mess_test.html"><i class="fa fa-envelope "></i>Message</a>
+                     
+                    </li>
+                     <li>
+                        <a href="Q_patient.html"><i class="fa fa-question "></i>Questions</a>
+                         
+                    </li>
+                    <li>
+                        <a href="emergecy_main.html"><i class="fa fa-ambulance"></i>Emergecy</a>
+                        
+                    </li>
+                    <li>
+                        <a href="error.html"><i class="fa fa-wrench "></i>Setting</a>
+                        
+                    </li>
+                     
+                      <li>
+                        <a href="login.html"><i class="fa fa-power-off "></i>Logout</a>
+                    </li>
+                     
+                </ul>
+
+            </div>
+
+        </nav>
+        <!-- /. NAV SIDE  -->
+        <div id="page-wrapper">
+            <div class="col-md-6 col-sm-6" style="width:100%;">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Patient Profile
+                   
+                        <div class="panel-body">
+                            <ul class="nav nav-tabs">
+                                <li class="active"><a href="#personal" data-toggle="tab">Personal</a>
+                                </li>
+                                <li class=""><a href="#profession" data-toggle="tab">Disease History</a>
+                                </li>
+                                <li class=""><a href="#questions" data-toggle="tab">Questions</a>
+                                </li>
+                            </ul>
+
+                            <div class="tab-content">
+                                <div class="tab-pane fade active in" id="personal">
+                                   <div class="form-group">
+                                       <label class="control-label col-lg-4" style=" display: block;width: 100%;text-align: left;">Image Upload</label>
+                        
+                        <div class="">
+                            <div class="fileupload fileupload-new" data-provides="fileupload">
+                                <div class="fileupload-preview thumbnail" style="width: 200px; height: 150px;float:left;"></div>
+                                <div style="height:200px;">
+                                <label style="font-size:20px;">&nbsp;hanan yaser</label>
+                                <br/>
+                                <label>&nbsp;Engineer </label>
+                                <br/>
+                                &nbsp;<button class="btn btn-primary">Connect</button>&nbsp;<button class="btn btn-primary">Message</button>
+                                </div>
+                                <div>
+                                    <span class="btn btn-file btn-success"><span class="fileupload-new">Select image</span><span class="fileupload-exists">Change</span><input type="file"></span>
+                                    <a href="#" class="btn btn-danger fileupload-exists" data-dismiss="fileupload">Remove</a>
+                                </div>
+                                <br/>
+                                <div style="">
+                                <label style="width:50%">&nbsp;phone : 01011111515</label>
+                                <label>&nbsp;age: 21</label>
+                                <br/>
+                                <label style="width:50%">&nbsp;gender : male </label>
+                                <label>&nbsp;Height : 147 cm</label>
+                                <br/>
+                                <label style="width:50%">&nbsp;weight : 47 kg</label>
+                                <label>&nbsp;Email: hanan@gmail.com</label>
+                                <br/>
+                                <label>Address: 28 Damitte Street, Roushdy - Alexandria. </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   
+                                    <div class="Edit-buttom">
+                                    <button class="btn btn-primary"><i class="glyphicon glyphicon-search"></i>Edit</button>
+                                    </div>
+                                    <div class="clear-fix"></div>
+                                    <hr />
+                                </div>
+                                <div class="tab-pane fade" id="profession">
+                                    <h4>Disease history</h4>
+                                    <div class="Proffession-info">
+                                        <!-- Start info -->
+                                        <p>Disease name:</p>
+                                        <p>blood sugar</p>
+                                        <div class="clear-fix"></div>
+                                        <!-- End info -->
+                                        <!-- Start info -->
+                                        <p>Attachment a pic/video:ffhfgdgfd.jpg </p>
+                                        
+                                        <div class="clear-fix"></div>
+                                        <!-- End info -->
+                                        <!-- Start info -->
+                                        <p>last tests: </p>
+                                        <p>blood test</p>
+                                        <div class="clear-fix"></div>
+                                        <!-- End info -->
+                                        <!-- Start info -->
+                                        <p>medicine: </p>
+                                        <p>panadol,sdfsd,sdfsf</p>
+                                        <div class="clear-fix"></div>
+                                        <!-- End info -->
+                                        <!-- Start info -->
+                                        <p>allerge of medicine : </p>
+                                        <p>panadol </p>
+                                        <div class="clear-fix"></div>
+                                        <!-- End info -->
+                                        <!-- Start info -->
+                                        <p>notes : </p>
+                                        <p> </p>
+                                        <div class="clear-fix"></div>
+                                        <!-- End info -->
+                                        <!-- Start info -->
+                                        
+                                        
+                                        <div class="update-buttom">
+                                        
+                                      <button class="btn btn-inverse"><i class="glyphicon glyphicon-plus"></i>Update Record</button>
+                                        </div>
+                                    <div class="clear-fix"></div>
+                                    <hr />
+                                    <div class="col-md-6 col-sm-6 col-xs-12" style="width:100%;"> 
+               <div class="panel panel-info">
+                        <div class="panel-heading">
+                           BASIC FORM
+                        </div>
+                        <div class="panel-body">
+                            <form role="form">
+                                        <div class="form-group col-md-6">
+                                            <label>Name</label>
+                                            <input class="form-control" type="text">
+                                        </div>
+                                 <div class="form-group col-md-6">
+                                            <label>Attachment a pic/video</label>
+                                            <input type="file" name="img"> 
+                                        </div>
+                                        <div class="form-group col-md-6" style="width:100%">
+                                            <label>last tests </label>
+                                            <input class="form-control" type="text">
+                                        </div>
+                                         <div class="form-group col-md-6">
+                                            <label>medicine</label>
+                                            <br>
+                                        <input class="form-control" type="text">
+                                        </div>
+                                         <div class="form-group col-md-6">
+                                            <label>allerge of medicine</label>
+                                            <br>
+                                        <input class="form-control" type="text">
+                                        </div>
+                                <br>
+                                   <div class="form-group col-md-6">
+                                            <label>notes</label>
+                                            <br>
+                                        <input class="form-control" type="text">
+                                        </div>
+                                         <div class="form-group col-md-6">
+                                            <label>best hospital</label>
+                                            <br>
+                                        <input class="form-control" type="text">
+                                        </div>           
+                                 <div class="form-group col-md-6" style="width:100%">
+                                        <button type="submit" class="btn btn-info">submit </button>
+                                 </div>
+                                    </form>
+                            </div>
+                        </div>
+                            </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="tab-pane fade" id="questions">
+                                    <h4>questions Tab</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                </div>
+                                <div class="tab-pane fade" id="settings">
+                                    <h4>Settings Tab</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <!-- /. PAGE INNER  -->
+        </div>
+        <!-- /. PAGE WRAPPER  -->
+    </div>
+    </div>
+    <!-- /. WRAPPER  -->
+    <div id="footer-sec">
+        &copy; 2017 Doctor&Patient | Design By : Doctor&Patient Group | EELU
+    </div>
+    <!-- /. FOOTER  -->
+    <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
+    <!-- JQUERY SCRIPTS -->
+    <script src="assets/js/jquery-1.10.2.js"></script>
+    <!-- BOOTSTRAP SCRIPTS -->
+    <script src="assets/js/bootstrap.js"></script>
+    <!-- METISMENU SCRIPTS -->
+    <script src="assets/js/jquery.metisMenu.js"></script>
+    <!-- CUSTOM SCRIPTS -->
+    <script src="assets/js/custom.js"></script>
+    
+    
+    <!-- PAGE LEVEL SCRIPTS -->
+    <script src="assets/js/bootstrap-fileupload.js"></script>
+    
+
+
+</body>
+</html>

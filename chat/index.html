@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doctor& Patient</title>
+
+    <!-- BOOTSTRAP STYLES-->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <!-- FONTAWESOME STYLES-->
+    <link href="assets/css/font-awesome.css" rel="stylesheet" />
+    <!--CUSTOM BASIC STYLES-->
+    <link href="assets/css/basic.css" rel="stylesheet" />
+    <!--CUSTOM MAIN STYLES-->
+    <link href="assets/css/custom.css" rel="stylesheet" />
+    <!-- GOOGLE FONTS-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+</head>
+<body>
+<div class="panel panel-success">
+    <div class="panel-heading">
+<div id="body"></div>
+
+    </div>
+</div>
+<input type="text" name="reveicerid" id="me">
+<input type="text" name="senerid" id="to">
+<textarea id="msg"></textarea>
+<button name="send" id="send">send</button>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+
+
+function showmessages() {
+
+    $.ajax(
+        {
+
+            url: "readmsg.php"
+            ,
+            type: "post"
+            ,
+            data: {
+                'reveicerid': $("#me").val(),
+                'senerid': $("#to").val(),
+                'msg': $('#msg').val()
+
+
+            }
+            , success: function (response) {
+            $("#body").html(response) ;
+
+        }
+        }
+    );
+
+
+}
+
+
+
+                $('#send').click(function () {
+            alert("click done");
+
+
+           $.ajax(
+
+                {
+
+                    url:"sendmsg.php"
+                    ,
+                    type:"post"
+                    ,
+                    data:
+                    {
+                        'reveicerid':$("#me").val(),
+                        'senerid':$("#to").val(),
+                        'msg':$('#msg').val()
+
+
+                    }
+                        ,success:function (data)
+
+                {
+                    alert("done");
+                }
+
+
+
+                }
+            )
+
+        }
+
+        );
+
+setInterval(showmessages,100);
+    </script>
+</body>
+</html>

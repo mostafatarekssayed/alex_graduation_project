@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doctor& Patient</title>
+
+    <!-- BOOTSTRAP STYLES-->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <!-- FONTAWESOME STYLES-->
+    <link href="assets/css/font-awesome.css" rel="stylesheet" />
+    <!--WIZARD STYLES-->
+    <link href="assets/css/wizard/normalize.css" rel="stylesheet" />
+    <link href="assets/css/wizard/wizardMain.css" rel="stylesheet" />
+    <link href="assets/css/wizard/jquery.steps.css" rel="stylesheet" />
+    <!--CUSTOM BASIC STYLES-->
+    <link href="assets/css/basic.css" rel="stylesheet" />
+    <!--CUSTOM MAIN STYLES-->
+    <link href="assets/css/custom.css" rel="stylesheet" />
+    <!-- GOOGLE FONTS-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+</head>
+<body>
+<div id="wrapper">
+    <nav class="navbar navbar-default navbar-cls-top " role="navigation" style="margin-bottom: 0">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"> </span>
+                <span class="icon-bar"> </span>
+                <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand" href="index_patient.html">Doctor & Patient </a>
+        </div>
+
+        <div class="header-right">
+
+            <a href="mess_test.html" class="btn btn-info" title="New Message"><b>30 </b><i class="fa fa-envelope-o fa-2x"> </i></a>
+            <a href="Q_patient.html" class="btn btn-primary" title="New answer"><b>40 </b><i class="fa fa-question fa-2x"> </i></a>
+            <a href="login.html" class="btn btn-danger" title="Logout"><i class="fa fa-exclamation-circle fa-2x"> </i> </a>
+
+        </div>
+    </nav>
+    <!-- /. NAV TOP  -->
+    <nav class="navbar-default navbar-side" role="navigation">
+        <div class="sidebar-collapse">
+            <ul class="nav" id="main-menu">
+                <li>
+                    <div class="user-img-div">
+                        <img src="assets/img/user.png" class="img-thumbnail" />
+
+                        <div class="inner-text">
+                            Jhon Deo Alex
+                            <br />
+                            <small>Last Login : 2 Weeks Ago </small>
+                        </div>
+                    </div>
+
+                </li>
+
+
+                <li>
+                    <a class="active-menu" href="index_patient.html"><i class="fa fa-home "> </i>Home</a>
+                </li>
+                <li>
+                    <a href="strange_case.html"><i class="fa fa-stethoscope"> </i>strange cases </a>
+                </li>
+                <li>
+                    <a href="mess_test.html"><i class="fa fa-envelope "> </i>Message</a>
+
+                </li>
+                <li>
+                    <a href="Q_patient.html"><i class="fa fa-question "> </i>Questions</a>
+
+                </li>
+                <li>
+                    <a href="emergecy_main.html"><i class="fa fa-ambulance"> </i>Emergecy</a>
+
+                </li>
+                <li>
+                    <a href="error.html"><i class="fa fa-wrench "> </i>Setting</a>
+
+                </li>
+
+                <li>
+                    <a href="login.html"><i class="fa fa-power-off "> </i>Logout</a>
+                </li>
+            </ul>
+
+        </div>
+
+    </nav>
+    <!-- /. NAV SIDE  -->
+    <div id="page-wrapper">
+        <div id="page-inner">
+
+            <!-- /. ROW  -->
+            <script>
+
+                function showText(a){
+                    document.getElementById("woman").src = a ;
+                }
+                function showText1(a){
+                    document.getElementById("man").src = a ;
+                }
+                function showText2(a){
+                    document.getElementById("child").src = a ;
+                }
+
+                function hideimg(){
+                    document.getElementById("woman").src = "img/woman/woman.jpg";
+                }
+                function hideimg1(){
+                    document.getElementById("man").src = "img/man/man.jpg";
+                }
+                function hideimg2(){
+                    document.getElementById("man").src = "img/kid/kid.jpg";
+
+                }
+
+
+                ;
+            </script>
+            <!-- /. ROW  -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Step one
+                        </div>
+                        <div class="panel-body">
+
+
+                            <div id="wizardV">
+                                <!-- type of model -->
+                                <h2> select the type of model</h2>
+                                <section>
+                                    <form>
+                                        <div class="row col-md-offset-2">
+                                            <div class="form-group col-md-4">
+                                                <label for="gender_male">Male
+                                                    <input id="gender_male" name="gender" class="gender form-control" type="radio" data-gender="male" value="man" checked="true" />
+                                                </label>
+                                            </div>
+                                            <div class="form-group col-md-4">
+                                                <label for="gender_woman">Woman
+                                                    <input id="gender_woman" name="gender" class="gender form-control" type="radio" data-gender="woman"  value="woman"/>
+                                                </label>
+                                            </div>
+                                            <div class="form-group col-md-4">
+                                                <label for="gender_child">Child
+                                                    <input id="gender_child" name="gender" class="gender form-control" type="radio"  data-gender="child" value="child"/>
+                                                </label>
+                                            </div>
+
+                                        </div>
+                                    </form>
+                                </section>
+                                <h2> select part that have pain</h2>
+
+                                <!-- woman model -->
+
+
+                                <section>
+
+                                    <div id="model_woman" class="col-md-12 col-sm-12 col-xs-12 woman">
+
+                                        <div class=row>
+                                            <div class=col-md-6>
+
+                                                <div class="form-group col-md-8">
+                                                    <label> Head and neck
+                                                        <input id="woman_head" name="body_part" class="form-control" type="radio" value="9"  onmouseover="showText('img/woman/w_head.jpg')" onmouseout="hideimg()"/>
+                                                    </label>
+                                                </div>
+
+                                                <div class="form-group col-md-4">
+                                                    <label> eyes
+                                                        <input id="woman_eye" name="body_part" class="form-control" type="radio" value="10" onmouseover="showText('img/woman/w_eye.jpg')" onmouseout="hideimg()"/>
+                                                    </label>
+                                                </div>
+
+                                                <div class="form-group col-md-4">
+                                                    <label> ear , nose and throat
+                                                        <input id="woman_ear" name="body_part" class="form-control" type="radio" value="11" onmouseover="showText('img/woman/w_ear.jpg')" onmouseout="hideimg()"/>
+                                                    </label>
+                                                </div>
+
+                                                <div class="form-group col-md-4">
+                                                    <label> chest and back
+                                                        <input id="woman_chest" name="body_part" class="form-control" type="radio" value="12" onmouseover="showText('img/woman/w_chest.jpg')" onmouseout="hideimg()"/>
+                                                    </label>
+                                                </div>
+
+                                                <div class="form-group col-md-4">
+                                                    <label> Abdomen and pelvis
+                                                        <input id="woman_chest" name ="body_part" class="form-control" type="radio" value="13" onmouseover="showText('img/woman/w_belly.jpg')" onmouseout="hideimg()"/>
+                                                    </label>
+                                                </div>
+
+                                                <div class="form-group col-md-4">
+                                                    <label> Arams and Hands
+                                                        <input id="woman_arm" name="body_part" class="form-control" type="radio" value="14" onmouseover="showText('img/woman/w_belly.jpg')" onmouseout="hideimg()"/>
+                                                    </label>
+                                                </div>
+
+                                                <div class="form-group col-md-4">
+                                                    <label> Legs
+                                                        <input id="woman_leg" name="body_part" class="form-control" type="radio" value="15" onmouseover="showText('img/woman/w_leg.jpg')" onmouseout="hideimg()"/>
+                                                    </label>
+                                                </div>
+
+                                                <div class="form-group col-md-4">
+                                                    <label> Others
+                                                        <input id="woman_other" name="body_part" class="form-control" type="radio" value="16" onmouseover="showText('img/woman/w_other.jpg')" onmouseout="hideimg()"/>
+                                                    </label>
+                                                </div>
+                                                <!--
+                                               <ul class="nav nav-second-level">
+                                                  <li>
+                                                        <a href="new_file.html" onmouseover="showText('img/woman/w_head.jpg')" onmouseout="hideimg()">Head and Nick </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="pricing.html"onmouseover="showText('img/woman/w_eye.jpg')" onmouseout="hideimg()">Eyes</a>
+                                                    </li>
+                                                     <li>
+                                                        <a href="component.html"onmouseover="showText('img/woman/w_ear.jpg')" onmouseout="hideimg()">Ear,Noseand Throat</a>
+                                                    </li>
+                                                     <li>
+                                                        <a href="social.html"onmouseover="showText('img/woman/w_chest.jpg')" onmouseout="hideimg()">Chest And Back</a>
+                                                    </li>
+
+                                                     <li>
+                                                        <a href="message-task.html"onmouseover="showText('img/woman/w_belly.jpg')" onmouseout="hideimg()">Abdomen and pelvis</a>
+                                                    </li>
+                                                     <li>
+                                                        <a href="message-task.html"onmouseover="showText('img/woman/w_hand.jpg')" onmouseout="hideimg()">Arams and Hands</a>
+                                                    </li>
+                                                     <li>
+                                                        <a href="message-task.html"onmouseover="showText('img/woman/w_leg.jpg')" onmouseout="hideimg()">Legs</a>
+                                                    </li>
+                                                     <li>
+                                                        <a href="acne.html"onmouseover="showText('img/woman/w_other.jpg')" onmouseout="hideimg()">Other</a>
+                                                    </li>
+
+
+                                                </ul>
+                                                -->
+                                            </div>
+
+
+
+
+                                            <div class="col-md-6">
+
+                                                <img src="img/woman/woman.jpg"  class="pull-right" id = "woman" usemap="#womanmap" style="width:210px;height:333px;">
+                                            </div>
+                                        </div>
+
+
+
+                                        <map name="womanmap">
+                                            <area shape="poly" coords="57,329,92,328,89,313,90,296,93,284,97,260,94,247,95,233,99,209,103,196,104,159,74,180,42,166" onmouseover="showText('img/woman/w_leg.jpg')" onmouseout="hideimg()" >
+                                            <area shape="rect" coords="62,50,83,57"  onmouseover="showText('img/woman/w_head.jpg')" onmouseout="hideimg()" href="" />
+                                            <area shape="rect" coords="57,15,88,29"  onmouseover="showText('img/woman/w_head.jpg')" onmouseout="hideimg()" />
+                                            <area shape="rect" coords="76,29,84,35"  onmouseover="showText('img/woman/w_eye.jpg')" onmouseout="hideimg()"  />
+                                            <area shape="rect" coords="61,30,70,36"  onmouseover="showText('img/woman/w_eye.jpg')" onmouseout="hideimg()"/>
+                                            <area shape="rect" coords="86,31,92,38" onmouseover="showText('img/woman/w_ear.jpg')" onmouseout="hideimg()" />
+                                            <area shape="rect" coords="56,31,60,39" onmouseover="showText('img/woman/w_ear.jpg')" onmouseout="hideimg()"/>
+                                            <area shape="rect" coords="69,32,78,44" onmouseover="showText('img/woman/w_ear.jpg')" onmouseout="hideimg()" />
+                                            <area shape="rect" coords="47,60,99,102" onmouseover="showText('img/woman/w_chest.jpg')" onmouseout="hideimg()"  />
+                                            <area shape="rect"  coords="35,61,45,118" onmouseover="showText('img/woman/w_hand.jpg')" onmouseout="hideimg()"   />
+                                            <area shape="rect"  coords="24,99,34,151" onmouseover="showText('img/woman/w_hand.jpg')" onmouseout="hideimg() "/>
+                                            <area shape="rect"  coords="8,141,23,191" onmouseover="showText('img/woman/w_hand.jpg')" onmouseout="hideimg()" >
+                                            <area shape="rect"  coords="102,67,115,117" onmouseover="showText('img/woman/w_hand.jpg')" onmouseout="hideimg()" />
+                                            <area shape="poly" coords="96,107,95,125,95,131,104,155,73,177,44,161,51,132,51,117,50,107,96,107" onmouseover="showText('img/woman/w_belly.jpg')" onmouseout="hideimg()"  />
+                                            <area shape="rect"  coords="112,117,126,156" onmouseover="showText('img/woman/w_hand.jpg')" onmouseout="hideimg() " />
+                                            <area shape="rect"  coords="124,157,139,188" onmouseover="showText('img/woman/w_hand.jpg')" onmouseout="hideimg()" />
+
+                                        </map>
+                                    </div>
+
+
+                                    <!--  end of woman model -->
+
+                                    <!-- man model -->
+
+
+                                    <div id="model_man" class="col-md-12 col-sm-12 col-xs-12 man">
+                                        <div class="row">
+                                            <div class="col-md-6">
+
+                                                <ul class="nav nav-second-level">
+                                                    <li>
+                                                        <a href="new_file.html" onmouseover="showText1('img/man/head.jpg')" onmouseout="hideimg1()">Head and Nick </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="pricing.html"onmouseover="showText1('img/man/eye.jpg')" onmouseout="hideimg1()">Eyes</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="component.html"onmouseover="showText1('img/man/ear.jpg')" onmouseout="hideimg1()">Ear,Noseand Throat</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="social.html"onmouseover="showText1('img/man/chest.jpg')" onmouseout="hideimg1()">Chest And Back</a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a href="message-task.html"onmouseover="showText1('img/man/belly.jpg')" onmouseout="hideimg1()">Abdomen and pelvis</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="message-task.html"onmouseover="showText1('img/man/hand.jpg')" onmouseout="hideimg1()">Arams and Hands</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="message-task.html"onmouseover="showText1('img/man/leg.jpg')" onmouseout="hideimg1()">Legs</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="acne.html"onmouseover="showText1('img/man/other.jpg')" onmouseout="hideimg1()">Other</a>
+                                                    </li>
+
+
+                                                </ul>
+
+
+                                            </div>
+                                            <div class="col-md-6">
+
+
+
+
+                                                <img src="img/man/man.jpg"  class="pull-right" id = "man" usemap="#manmap" style="width:210px;height:333px;">
+                                            </div>
+                                        </div>
+
+
+
+                                        <map name="manmap">
+                                            <area shape="poly" coords="57,329,92,328,89,313,90,296,93,284,97,260,94,247,95,233,99,209,103,196,104,159,74,180,42,166" onmouseover="showText1('img/man/leg.jpg')" onmouseout="hideimg1()" >
+                                            <area shape="rect" coords="62,50,83,57"  onmouseover="showText1('img/man/head.jpg')" onmouseout="hideimg1()" href="" />
+                                            <area shape="rect" coords="57,15,88,29"  onmouseover="showText1('img/man/head.jpg')" onmouseout="hideimg1()" />
+                                            <area shape="rect" coords="76,29,84,35"  onmouseover="showText1('img/man/eye.jpg')" onmouseout="hideimg1()"  />
+                                            <area shape="rect" coords="61,30,70,36"  onmouseover="showText1('img/man/eye.jpg')" onmouseout="hideimg1()"/>
+                                            <area shape="rect" coords="86,31,92,38" onmouseover="showText1('img/man/ear.jpg')" onmouseout="hideimg1()" />
+                                            <area shape="rect" coords="56,31,60,39" onmouseover="showText1('img/man/ear.jpg')" onmouseout="hideimg1()"/>
+                                            <area shape="rect" coords="69,32,78,44" onmouseover="showText1('img/man/ear.jpg')" onmouseout="hideimg1()" />
+                                            <area shape="rect" coords="47,60,99,102" onmouseover="showText1('img/man/chest.jpg')" onmouseout="hideimg1()"  />
+                                            <area shape="rect"  coords="35,61,45,118" onmouseover="showText1('img/man/hand.jpg')" onmouseout="hideimg1()"   />
+                                            <area shape="rect"  coords="24,99,34,151" onmouseover="showText1('img/man/hand.jpg')" onmouseout="hideimg1() "/>
+                                            <area shape="rect"  coords="8,141,23,191" onmouseover="showText1('img/man/hand.jpg')" onmouseout="hideimg1()" >
+                                            <area shape="rect"  coords="102,67,115,117" onmouseover="showText1('img/man/hand.jpg')" onmouseout="hideimg1()" />
+                                            <area shape="poly" coords="96,107,95,125,95,131,104,155,73,177,44,161,51,132,51,117,50,107,96,107" onmouseover="showText1('img/man/belly.jpg')" onmouseout="hideimg1()"  />
+                                            <area shape="rect"  coords="112,117,126,156" onmouseover="showText1('img/man/hand.jpg')" onmouseout="hideimg1() " />
+                                            <area shape="rect"  coords="124,157,139,188" onmouseover="showText1('img/man/hand.jpg')" onmouseout="hideimg1()" />
+
+                                        </map>
+                                    </div>
+
+                                    <!--  end of man model -->
+
+
+                                    <!-- kid model -->
+
+                                    <div id="model_child" class="col-md-12 col-sm-12 col-xs-12 child">
+
+                                        <div class=row>
+                                            <div class=col-md-6>
+                                                <ul class="nav nav-second-level">
+                                                    <li>
+                                                        <a href="new_file.html" onmouseover="showText2('img/kid/kid_head.jpg')" onmouseout="hideimg2()">Head and Nick </a>
+
+                                                    </li>
+                                                    <li>
+                                                        <a href="pricing.html"onmouseover="showText2('img/kid/kid_eye.jpg')" onmouseout="hideimg2()">Eyes</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="component.html"onmouseover="showText2('img/kid/kid_ear.jpg')" onmouseout="hideimg2()">Ear,Noseand Throat</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="social.html"onmouseover="showText2('img/kid/kid_chest.jpg')" onmouseout="hideimg2()">Chest And Back</a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a href="message-task.html"onmouseover="showText2('img/kid/kid_belly.jpg')" onmouseout="hideimg2()">Abdomen and pelvis</a>
+                                                    </li>
+
+
+                                                    <li>
+                                                        <a href="acne.html"onmouseover="showText2('img/kid/kid_other.jpg')" onmouseout="hideimg2()">Other</a>
+                                                    </li>
+
+
+                                                </ul>
+
+                                            </div>
+
+
+
+
+                                            <div class="col-md-6">
+
+                                                <img src="img/kid/kid.jpg"  class="pull-right" id = "child" usemap="#kidmap" style="width:210px;height:333px;">
+                                            </div>
+                                        </div>
+
+                                        <map name="kidmap">
+                                            <area shape="rect" coords="62,63,84,72" onmouseover="showText2('img/kid/kid_head.jpg')" onmouseout="hideimg2()" href="" />
+                                            <area shape="rect" coords="59,30,88,42"  onmouseover="showText2('img/kid/kid_head.jpg')" onmouseout="hideimg2()" />
+                                            <area shape="rect" coords="77,42,84,49"  onmouseover="showText2('img/kid/kid_eye.jpg')" onmouseout="hideimg2()"  />
+                                            <area shape="rect" coords="64,44,70,51"   onmouseover="showText2('img/kid/kid_eye.jpg')" onmouseout="hideimg2()"/>
+                                            <area shape="rect" coords="85,46,91,56" onmouseover="showText2('img/kid/kid_ear.jpg')" onmouseout="hideimg2()" />
+                                            <area shape="rect" coords="55,44,62,55" onmouseover="showText2'img/kid/kid_ear.jpg')" onmouseout="hideimg2()"/>
+                                            <area shape="rect" coords="70,45,77,57"onmouseover="showText2('img/kid/kid_ear.jpg')" onmouseout="hideimg2()" />
+                                            <area shape="rect" coords="52,81,94,111"  onmouseover="showText2('img/kid/kid_chest.jpg')" onmouseout="hideimg2()"  />
+                                            <area shape="poly" coords="94,110,94,121,93,129,95,137,95,143,96,141,95,143,96,150,75,165,51,153,55,135,54,139,56,123,51,107,52,111" onmouseover="showText2('img/kid/kid_belly.jpg')" onmouseout="hideimg2()"  />
+
+
+                                        </map>
+                                    </div>
+                                    <!--  end of kid model -->
+
+
+                                </section>
+
+
+                                <h2> Question (1)</h2>
+
+                                <section>
+                                    <p><div class="panel-body" >
+                                    <form role="form" method="post" action="wizard.php">
+                                        <div class="form-group">
+                                            <label id="txt1"> </label>
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="radio" name="ques1" id="optionsRadios1" value="yes" checked="">
+                                                    YES
+                                                </label>
+                                            </div>
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="radio" name="ques1" id="optionsRadios1" value="no" c>
+                                                    NO
+                                                </label>
+                                            </div>
+                                    </p>
+                                </section>
+                                <script>
+                                    function addDiv() {
+                                        var objTo = document.getElementById('container')
+                                        var divtest = document.createElement("section");
+                                        divtest.innerHTML = ""
+                                        objTo.appendChild(divtest)
+                                    }
+                                </script>
+
+                                <h2> Question (2)</h2>
+                                <section  id = "container">
+                                    <p> <div class="panel-body" >
+
+                                    <div class="form-group">
+                                        <label>Are there Sididip yellow pustules appear on the top of Alhabayat?  </label>
+                                        <div class="radio">
+                                            <label>
+                                                <input type="radio" name="yellow" id="optionsRadios1" value="option1" checked="">
+                                                YES
+                                            </label>
+                                        </div>
+                                        <div class="radio">
+                                            <label>
+                                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
+                                                NO
+                                            </label>
+                                        </div>
+                                    </p>
+                                </section>
+
+
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- /. PAGE INNER  -->
+        </div>
+        <!-- /. PAGE WRAPPER  -->
+    </div>
+    <!-- /. WRAPPER  -->
+    <div id="footer-sec">
+        &copy; 2017 Doctor&Patient | Design By : Doctor&Patient Group | EELU
+    </div>
+    <!-- /. FOOTER  -->
+    <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
+    <!-- JQUERY SCRIPTS -->
+    <script src="assets/js/jquery-1.10.2.js"></script>
+    <!-- BOOTSTRAP SCRIPTS -->
+    <script src="assets/js/bootstrap.js"></script>
+    <!-- METISMENU SCRIPTS -->
+    <script src="assets/js/jquery.metisMenu.js"></script>
+    <!-- WIZARD SCRIPTS -->
+    <script src="assets/js/wizard/modernizr-2.6.2.min.js"></script>
+    <script src="assets/js/wizard/jquery.cookie-1.3.1.js"></script>
+    <script src="assets/js/wizard/jquery.steps.js"></script>
+    <!-- CUSTOM SCRIPTS -->
+    <script src="assets/js/custom.js"></script>
+</body>
+</html>
